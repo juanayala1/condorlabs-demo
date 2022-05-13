@@ -1,0 +1,1 @@
+const response = require('../../1. network/response');
