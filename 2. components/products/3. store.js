@@ -1,6 +1,6 @@
 const Model = require('./4. model');
 
-function addProduct(product){
+function addProduct({product}){
     console.log('store prod: ' + JSON.stringify(product));
     const prod = new Model(product);
     console.log('prodddd: ' + prod);
