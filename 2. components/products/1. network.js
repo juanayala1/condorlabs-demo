@@ -4,7 +4,15 @@ const controller = require('./2. controller');
 const router = express.Router();
 const logger = require('@condor-labs/logger');
 
-router.post('/', function(req, res) {
+const {
+    productIdSchema,
+    createProductSchema,
+    updateProductSchema,
+  } = require("../../utils/schemas/products");
+
+  const validationHandler = require("../../utils/middleware/validationHandler");
+
+router.post('/', validationHandler(createProductSchema), function(req, res) {
     controller.addProduct(req.body)
         .then(data => {
             response.success(req, res, data, 201);
@@ -16,7 +24,6 @@ router.post('/', function(req, res) {
 });
 
 router.get('/', function(req, res) {
-    console.log('pasa por el get de product');
     controller.listProducts()
         .then(users => {
             response.success(req, res, users, 200);
