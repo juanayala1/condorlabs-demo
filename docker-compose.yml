@@ -19,7 +19,7 @@ services:
    environment:
      MONGO_INITDB_ROOT_USERNAME: "juanayalaclabs"
      MONGO_INITDB_ROOT_PASSWORD: "LaLtmciVxpdpsaXy"
-     MONGO_INITDB_DATABASE: "db_test1"
+     MONGO_INITDB_DATABASE: "DEMO_ShoppingCart"
    ports:
      - 27017:27017
    networks:

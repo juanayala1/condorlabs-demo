@@ -5,4 +5,4 @@ pm2 stop 0
 pm2 logs 0   
 pm2 status       
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::  
-   
+docker-compose up --- generar imagen a partir de docker-compose.yml.
